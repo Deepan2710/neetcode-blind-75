@@ -1,0 +1,19 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+          HashSet<Integer> hash=new HashSet<Integer>();
+        int set=0;
+        for(int i=0;i<nums.length;i++){
+            if(hash.contains(nums[i])){
+                set=1;
+                break;
+            }
+            else{
+                hash.add(nums[i]);
+            }
+        }
+        if(set==1)
+        return true;
+
+    return false;
+    }
+}
