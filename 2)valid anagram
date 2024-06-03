@@ -1,0 +1,23 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+      int arr[]=new int[s.length()];
+      if(s.length()!=t.length()){
+        return false;
+      }
+       int count=0;
+      for(int i=0;i<s.length();i++){
+        for(int j=0;j<t.length();j++){
+            if(s.charAt(i)==t.charAt(j) && arr[j]==0){
+                count+=1;
+                arr[j]=1;
+                break;
+            }
+        }
+      }
+      if(count==s.length()){
+    return true;
+      }
+
+      return false;
+    }
+}
